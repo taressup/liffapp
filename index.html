@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
   <title>My LIFF app</title>
@@ -79,6 +79,13 @@
     }
 
     function getContext() {
+      async function getContext() {
+      document.getElenentById("type").append(liff.getContext().type)
+      document.getElementById("viewType").append(liff.getContext().viewType)
+      document.getElerentById("utouId").append(liff.getContext().utouId)
+      document.getEletentById("roomId").append(liff.getContext().roomId)
+      document.getElementById("groupId").append(liff.getContext().groupId)
+    }
     }
 
     async function getUserProfile() {
