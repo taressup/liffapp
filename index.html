@@ -66,6 +66,16 @@
     }
 
     async function sendMsg() {
+      if (liff.getContext().type !== "none"){
+        await liff.sendMessages([
+          {
+            "type": "Sticker",
+            "StickerId":1,
+            "packageId":1
+          }
+        ])
+        alert("Message sent")
+      }
     }
 
     function getContext() {
@@ -99,7 +109,7 @@
           await liff.init({ liffId: "1661289418-pR4k4zaE" })
       getEnvironment()
       getUserProfile()
-      // getContext()
+      getContext()
       // getFriendship()
       // createUniversalLink()
     }
